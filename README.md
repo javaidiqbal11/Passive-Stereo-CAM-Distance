@@ -1,9 +1,10 @@
-### Passive Stereo Camera Distance Measurement
+## Passive Stereo Camera Distance Measurement
 
 "The use of the passive stereo camera to reconstruct depth for a very large distance application"
 
-Install the required packages
-```text
+**Setup** </br>
+Install Python 3.10 and packages
+```shell
 pip install -r requirements.txt
 ```
 
@@ -42,6 +43,6 @@ The 1st milestone contains following points:
 
 
 #### Supporting material 
-https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main 
+- [Single Cam Distance Measurement](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main ) </br>
+- [Stereo Calibration](https://github.com/TemugeB/python_stereo_camera_calibrate)
 
-https://github.com/TemugeB/python_stereo_camera_calibrate
