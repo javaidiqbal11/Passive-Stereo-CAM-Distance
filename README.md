@@ -1,6 +1,6 @@
 ### Passive Stereo Camera Distance Measurement
 
-"The use of passive stereo camera to reconstruct depth for a very large distance application"
+"The use of the passive stereo camera to reconstruct depth for a very large distance application"
 
 Install the required packages
 ```text
