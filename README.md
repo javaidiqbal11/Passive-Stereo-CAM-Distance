@@ -8,6 +8,18 @@ Install Python 3.10 and packages
 pip install -r requirements.txt
 ```
 
+### How to run the code using PyCharm?
+Open the terminal on PyCharm 
+
+```shell
+python calibrate.py
+```
+
+```shell
+python rectification.py
+```
+
+
 ### Dataset Generation
 For distance measurement, there are no public datasets available. So, we have created the dataset for testing 
 the model we will be using in this project.
