@@ -20,7 +20,8 @@ f = 1.8nm
 Two objects, a lock and cup are placed at 40 and 50cm with left and right images.
 
 ### Camera Specification 
-**Logitech C270 WebCames 
+**Logitech C270 WebCames** 
+
 **Dimensions including fixed mounting clip**
 - Height: 2.87 in (72.91 mm)
 - Width: 1.26 in (31.91 mm)
