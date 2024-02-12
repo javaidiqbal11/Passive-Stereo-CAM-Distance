@@ -27,6 +27,7 @@ Two objects, a lock and cup are placed at 40 and 50cm with left and right images
 - Depth: 2.62 in (66.64 mm)
 - Cable length: 5 ft (1.5 m)
 - Weight: 2.65 oz (75 g)
+  
 **Technical Specifications**
 - Max Resolution: 720p/30fps
 - Camera megapixel: 0.9
