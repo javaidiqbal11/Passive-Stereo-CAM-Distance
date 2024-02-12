@@ -59,4 +59,12 @@ retS, MLS, dLS, MRS, dRS, R, T, E, F = cv2.stereoCalibrate(objpoints,
                                                            criteria=criteria_stereo,
                                                            flags=cv2.CALIB_FIX_INTRINSIC)
 
-print("Calibration done")
+# StereoRectify function
+rectify_scale = 0  # if 0 image croped, if 1 image nor croped
+RL, RR, PL, PR, Q, roiL, roiR = cv2.stereoRectify(MLS, dLS, MRS, dRS, ChessImaR.shape[::-1], R, T, rectify_scale,(0, 0))
+# initUndistortRectifyMap function
+Left_Stereo_Map = cv2.initUndistortRectifyMap(MLS, dLS, RL, PL, ChessImaR.shape[::-1], cv2.CV_16SC2)
+Right_Stereo_Map = cv2.initUndistortRectifyMap(MRS, dRS, RR, PR, ChessImaR.shape[::-1], cv2.CV_16SC2)
+
+print(Left_Stereo_Map)
+print(Right_Stereo_Map)

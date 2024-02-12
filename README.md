@@ -28,10 +28,9 @@ The 1st milestone contains following points:
 5. A GitHub repo is created where these data and descriptions uploaded
 
 ### Milestone 2
-- Machine Learning
-- Deep Learning Algorithms Training
-- Stereo Rectification
-
+- Machine Learning (In-Progress)
+- Deep Learning Algorithms Training (Optional)
+- Stereo Rectification (Done)
 
 
 ### Milestone 3
