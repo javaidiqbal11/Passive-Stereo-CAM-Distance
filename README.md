@@ -8,6 +8,18 @@ Install Python 3.10 and packages
 pip install -r requirements.txt
 ```
 
+### How to run the code using PyCharm?
+Open the terminal on PyCharm 
+
+```shell
+python calibrate.py
+```
+
+```shell
+python rectification.py
+```
+
+
 ### Dataset Generation
 For distance measurement, there are no public datasets available. So, we have created the dataset for testing 
 the model we will be using in this project.
@@ -19,6 +31,24 @@ f = 1.8nm
 
 Two objects, a lock and cup are placed at 40 and 50cm with left and right images.
 
+### Camera Specification 
+**Logitech C270 WebCames** 
+
+**Dimensions including fixed mounting clip**
+- Height: 2.87 in (72.91 mm)
+- Width: 1.26 in (31.91 mm)
+- Depth: 2.62 in (66.64 mm)
+- Cable length: 5 ft (1.5 m)
+- Weight: 2.65 oz (75 g)
+  
+**Technical Specifications**
+- Max Resolution: 720p/30fps
+- Camera megapixel: 0.9
+- Focus type: fixed focus
+- Built-in mic: Mono
+- Mic range: Up to 3 ft (1 m)
+- The diagonal field of view (dFoV): 55°
+- Universal mounting clip fits laptops, LCDs or monitors
 
 ### Milestone 1
 The 1st milestone contains the following points:
