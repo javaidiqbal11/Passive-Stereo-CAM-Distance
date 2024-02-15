@@ -4,7 +4,7 @@ import cv2
 
 # ***** Parameters for Distortion Calibration *****
 SQUARE_SIZE = 30
-BOARD_SIZE = (11, 7)
+BOARD_SIZE = (9, 6)
 
 # Termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, SQUARE_SIZE, 0.001)
@@ -25,8 +25,8 @@ print('Starting calibration for the 2 cameras... ')
 # Call all saved images
 for i in range(1, 21):
     t = str(i)
-    ChessImaR = cv2.imread('data/chessboard/leftcamera/Im_L_' + t + '.png', 0)  # Right side
-    ChessImaL = cv2.imread('data/chessboard/rightcamera/Im_R_' + t + '.png', 0)  # Left side
+    ChessImaR = cv2.imread("data/chessboard/leftcamera/chessboard-L" + t + '.png', 0)  # Right side
+    ChessImaL = cv2.imread("data/chessboard/rightcamera/chessboard-R" + t + '.png', 0)  # Left side
     retR, cornersR = cv2.findChessboardCorners(ChessImaR, BOARD_SIZE, None)  # Define the number of chees corners we are looking for
     retL, cornersL = cv2.findChessboardCorners(ChessImaL, BOARD_SIZE, None)  # Left side
     if retR:
