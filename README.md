@@ -1,39 +1,56 @@
-## Passive Stereo Camera Distance Measurement
+### Passive Stereo Camera Distance Measurement
 
-"The use of the passive stereo camera to reconstruct depth for a very large distance application"
+"The use of passive stereo camera to reconstruct depth for a very large distance application"
 
 **Setup** </br>
-Install Python 3.10 and packages
+Install Python 3.10 and Packages
 ```shell
 pip install -r requirements.txt
 ```
 
-### How to run the code using PyCharm?
+**How to run the code using PyCharm?** </br>
 Open the terminal on PyCharm 
 
+- Stereo Camera Calibration
 ```shell
 python calibrate.py
 ```
-
+- Stereo Rectification
 ```shell
 python rectification.py
 ```
-
-
-### Dataset Generation
-For distance measurement, there are no public datasets available. So, we have created the dataset for testing 
-the model we will be using in this project.
-
-Here are the camera settings for this dataset.
-```text
-f = 1.8nm
+- Calculate the disparity 
+```shell
+python stereo_vision.py
 ```
 
-Two objects, a lock and cup are placed at 40 and 50cm with left and right images.
+- Take images from the camera after opening the cam
+```shell
+python take_images.py
+```
 
-### Camera Specification 
-**Logitech C270 WebCames** 
+### Key Paper Proposed Approach 
+All the given steps followed from the key-paper to perform the proposed approach.
+Following key-points are mentioned below and whole model divided into the milestones.
 
+![img.png](img.png) 
+
+### Milestone 1
+The first milestone contains the following points:
+1. Arrange a dataset to test the model, (left-side camera, right-side camera images of the objects)
+2. There are no public datasets available. So, we have created the dataset for testing 
+the model we will be using in this project. Chessboard used to capture their left and right camera images.
+3. Data Pre-processing (remove noise, enhance images, and prepare images for model)
+4. Two cameras set for the stereo calibration (Logitech C270 Webcams) 
+5. Calibration code added in which first it reads the images and gives calibration matrix
+6. A GitHub repo is created where these data and descriptions uploaded for version control
+7. Performed multiple options to set the stereo calibration 
+
+Here are the camera settings for this dataset acquisition: 
+
+**Camera Specification** </br>
+*Logitech C270 WebCameras* </br>
+These cameras have some specification:
 **Dimensions including fixed mounting clip**
 - Height: 2.87 in (72.91 mm)
 - Width: 1.26 in (31.91 mm)
@@ -50,18 +67,24 @@ Two objects, a lock and cup are placed at 40 and 50cm with left and right images
 - The diagonal field of view (dFoV): 55°
 - Universal mounting clip fits laptops, LCDs or monitors
 
-### Milestone 1
-The 1st milestone contains the following points:
-1. Arrange a dataset to test the model, (left-side camera, right-side camera images of the objects)
-2. Data Pre-processing (remove noise, enhance images, and prepare for model)
-3. Calibration code added which reads the images and gives calibration matrix
-4. Buy two cameras to set for the stereo calibration (Logitech C270 Webcams) 
-5. A GitHub repo is created where these data and descriptions uploaded
 
 ### Milestone 2
-- Machine Learning (In-Progress)
-- Deep Learning Algorithms Training (Optional)
-- Stereo Rectification (Done)
+The second milestone contains the following points:
+1. Input the left image (left cam) and right image (right cam)
+2. Stereo Rectification performed 
+3. Logistic regression applied in the model and get best results 
+4. Machine Learning (More algorithms are In-Progress)
+5. Deep Learning Algorithms Training (In-Progress)
+6. Obtained the left rectified and right rectified images 
+7. Parameters for Distortion Calibration
+
+**Disparity vs Distance results**
+
+![img_1.png](img_1.png)
+
+Graphical Representation 
+
+![img_2.png](img_2.png)
 
 
 ### Milestone 3
@@ -74,4 +97,3 @@ The 1st milestone contains the following points:
 #### Supporting material 
 - [Single Cam Distance Measurement](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main ) </br>
 - [Stereo Calibration](https://github.com/TemugeB/python_stereo_camera_calibrate)
-
