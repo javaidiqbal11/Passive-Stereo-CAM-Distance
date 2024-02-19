@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 # ***** Parameters for Distortion Calibration *****
-SQUARE_SIZE = 30
+SQUARE_SIZE = 22
 BOARD_SIZE = (9, 6)
 
 # Termination criteria

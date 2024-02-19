@@ -87,6 +87,13 @@ Graphical Representation
 ![img_2.png](img_2.png)
 
 
+Suggest to improve by the following points:
+
+- Processing time reduced (it's realtime distance calculation)
+- New algorithm used (polynomial regression)
+- Tune the algorithm's parameters(Done)
+- Any change as compared to the key paper(Key paper uses simple formula to calculate the distance using z = f*B/d, but in our approach we are using polynomial regression of order 3 based on disparity)
+
 ### Milestone 3
 - Stereo Matching
 - Distance Measurement

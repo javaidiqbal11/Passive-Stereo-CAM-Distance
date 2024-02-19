@@ -9,15 +9,14 @@ kernel = np.ones((3, 3), np.uint8)
 def coords_mouse_disp(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDBLCLK:
         # print(x, y, disp[y, x], filteredImg[y, x])
-        print(x, y, disp[y, x])
         average = 0
         for u in range(-1, 2):
             for v in range(-1, 2):
                 average += disp[y + u, x + v]
         average = average / 9
-        Distance = 299 + -2259 * average + -70133 * average ** 2 + 552635 * average ** 3
-        # Distance = 332 + -6043 * average + 29130 * average ** 2
-        # Distance= -593.97*average**(3) + 1506.8*average**(2) - 1373.1*average + 522.06
+        print(x, y, average)
+
+        Distance = 239 + -1007 * average + 1820 * average ** 2 + -1052 * average ** 3
         Distance = np.around(Distance * 0.01, decimals=2)
         print('Distance: ' + str(Distance) + ' m')
 
@@ -36,9 +35,11 @@ def coords_mouse_disp(event, x, y, flags, param):
 
 # ***** Parameters for Distortion Calibration *****
 
+# IN MM
+SQUARE_SIZE = 22
 # Termination criteria
-criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
-criteria_stereo = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
+criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, SQUARE_SIZE, 0.001)
+criteria_stereo = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, SQUARE_SIZE, 0.001)
 
 # Prepare object points
 objp = np.zeros((9 * 6, 3), np.float32)
@@ -53,7 +54,7 @@ imgpointsL = []
 print('Starting calibration for the 2 cameras... ')
 # Call all saved images
 # Put the amount of pictures you have taken for the calibration inbetween range(0,?) wenn starting from the image number 0
-for i in range(0, 21):
+for i in range(0, 25):
     t = str(i)
     ChessImaR = cv2.imread('data/chessboard/leftcamera/chessboard-L' + t + '.png', 0)  # Right side
     ChessImaL = cv2.imread('data/chessboard/rightcamera/chessboard-R' + t + '.png', 0)  # Left side
@@ -183,7 +184,7 @@ while True:
     grayL = cv2.cvtColor(Left_nice, cv2.COLOR_BGR2GRAY)
 
     # Compute the 2 images for the Depth_image
-    disparity = stereo.compute(grayL, grayR).astype(np.float32) / 16
+    disparity = stereo.compute(grayL, grayR)
     # print(f"Range: {np.min(disp)} <-> {np.max(disp)}")
     # print(disp)
     disp = disparity
