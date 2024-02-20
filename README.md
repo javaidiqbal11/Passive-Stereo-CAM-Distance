@@ -1,6 +1,6 @@
 ### Passive Stereo Camera Distance Measurement
 
-"The use of passive stereo camera to reconstruct depth for a very large distance application"
+"The use of the passive stereo camera to reconstruct depth for a very large distance application"
 
 **Setup** </br>
 Install Python 3.10 and Packages
@@ -87,19 +87,17 @@ Graphical Representation
 ![img_2.png](img_2.png)
 
 
-Suggest to improve by the following points:
-
-- Processing time reduced (it's realtime distance calculation)
-- New algorithm used (polynomial regression)
-- Tune the algorithm's parameters(Done)
-- Any change as compared to the key paper(Key paper uses simple formula to calculate the distance using z = f*B/d, but in our approach we are using polynomial regression of order 3 based on disparity)
-
 ### Milestone 3
 - Stereo Matching
 - Distance Measurement
 - Model Evaluation
 
 
+### Proposed Model with Novelty:
+- We have applied the same approach as per the key paper 
+- Applied Logistic Regression and obtained the results
+- Applied Deep Learning model and calculate the distance
+- Key paper uses a simple formula to calculate the distance using z = f*B/d, but in our approach, we are using polynomial regression of order 3 based on disparity
 
 #### Supporting material 
 - [Single Cam Distance Measurement](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main ) </br>
