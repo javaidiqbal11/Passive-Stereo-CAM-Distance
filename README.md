@@ -78,6 +78,23 @@ The second milestone contains the following points:
 6. Obtained the left rectified and right rectified images 
 7. Parameters for Distortion Calibration
 
+
+### Milestone 3
+- Stereo Matching
+- Distance Measurement
+- Model Evaluation
+
+
+### Novel Updates
+Suggest to improve by the following points:
+
+- Processing time reduced (it's realtime distance calculation)
+- New algorithm used (polynomial regression)
+- Tune the algorithm's parameters(Done)
+- Any change as compared to the key paper(Key paper uses simple formula to calculate the distance using z = f*B/d, but in our approach we are using polynomial regression of order 3 based on disparity)
+
+**Test 1
+
 **Disparity vs Distance results**
 
 ![img_1.png](img_1.png)
@@ -86,20 +103,14 @@ Graphical Representation
 
 ![img_2.png](img_2.png)
 
+**Test 2
+**Dataset**
 
-Suggest to improve by the following points:
+![img_1.png](img_3.png)
 
-- Processing time reduced (it's realtime distance calculation)
-- New algorithm used (polynomial regression)
-- Tune the algorithm's parameters(Done)
-- Any change as compared to the key paper(Key paper uses simple formula to calculate the distance using z = f*B/d, but in our approach we are using polynomial regression of order 3 based on disparity)
+**Proposed Model Prediction
 
-### Milestone 3
-- Stereo Matching
-- Distance Measurement
-- Model Evaluation
-
-
+![img_2.png](img_4.png)
 
 #### Supporting material 
 - [Single Cam Distance Measurement](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main ) </br>
