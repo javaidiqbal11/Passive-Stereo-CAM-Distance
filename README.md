@@ -9,7 +9,7 @@ pip install -r requirements.txt
 ```
 
 **How to run the code using PyCharm?** </br>
-Open the terminal on PyCharm and execute the required python file like given below:
+Open the terminal on PyCharm 
 
 - Stereo Camera Calibration
 ```shell
@@ -24,7 +24,7 @@ python rectification.py
 python stereo_vision.py
 ```
 
-- Take images from the camera after opening both cameras
+- Take images from the camera after opening the cam
 ```shell
 python take_images.py
 ```
@@ -37,8 +37,9 @@ Following key-points are mentioned below and whole model divided into the milest
 
 ### Milestone 1
 The first milestone contains the following points:
-1. Arrange a dataset to test the model (left-side camera, right-side camera images of the objects "Chessboard")
-2. There are no public datasets available. So, we have created the dataset for model testing the model. Chessboard used to capture their left and right camera images.
+1. Arrange a dataset to test the model, (left-side camera, right-side camera images of the objects)
+2. There are no public datasets available. So, we have created the dataset for testing 
+the model we will be using in this project. Chessboard used to capture their left and right camera images.
 3. Data Pre-processing (remove noise, enhance images, and prepare images for model)
 4. Two cameras set for the stereo calibration (Logitech C270 Webcams) 
 5. Calibration code added in which first it reads the images and gives calibration matrix
@@ -73,14 +74,20 @@ The second milestone contains the following points:
 2. Stereo Rectification performed 
 3. Logistic regression applied in the model and get best results 
 4. Machine Learning (More algorithms are In-Progress)
-5. Deep Learning Algorithms Training (Applied)
+5. Deep Learning Algorithms Training (In-Progress)
 6. Obtained the left rectified and right rectified images 
 7. Parameters for Distortion Calibration
 
+**Disparity vs Distance results**
+
+![img_1.png](img_1.png)
+
+Graphical Representation 
+
+![img_2.png](img_2.png)
 
 
-
-**Suggest to improve by the following points:**
+Suggest to improve by the following points:
 
 - Processing time reduced (it's realtime distance calculation)
 - New algorithm used (polynomial regression)
@@ -92,26 +99,6 @@ The second milestone contains the following points:
 - Distance Measurement
 - Model Evaluation
 
-
-### Testing Results
-### Test 1
-**Disparity vs Distance results**
-
-![img_1.png](img_1.png)
-
-Graphical Representation 
-
-![img_2.png](img_2.png)
-
-### Test 2
-**Disparity vs Distance results**
-**Dataset**
-
-![img_5.png](img_3.png)
-
-**Proposed Model Prediction Results
-
-![img_5.png](img_4.png)
 
 
 #### Supporting material 
