@@ -1,6 +1,6 @@
 # Package importation
-import numpy as np
 import cv2
+import numpy as np
 
 # ***** Parameters for Distortion Calibration *****
 SQUARE_SIZE = 22
@@ -27,7 +27,8 @@ for i in range(1, 21):
     t = str(i)
     ChessImaR = cv2.imread("data/chessboard/leftcamera/chessboard-L" + t + '.png', 0)  # Right side
     ChessImaL = cv2.imread("data/chessboard/rightcamera/chessboard-R" + t + '.png', 0)  # Left side
-    retR, cornersR = cv2.findChessboardCorners(ChessImaR, BOARD_SIZE, None)  # Define the number of chees corners we are looking for
+    retR, cornersR = cv2.findChessboardCorners(ChessImaR, BOARD_SIZE,
+                                               None)  # Define the number of chees corners we are looking for
     retL, cornersL = cv2.findChessboardCorners(ChessImaL, BOARD_SIZE, None)  # Left side
     if retR:
         cv2.cornerSubPix(ChessImaR, cornersR, (11, 11), (-1, -1), criteria)
@@ -41,7 +42,7 @@ for i in range(1, 21):
 #   Right Side
 retR, mtxR, distR, rvecsR, tvecsR = cv2.calibrateCamera(objpoints, imgpointsR, ChessImaR.shape[::-1], None, None)
 hR, wR = ChessImaR.shape[:2]
-OmtxR, roiR = cv2.getOptimalNewCameraMatrix(mtxR, distR,(wR, hR), 1, (wR, hR))
+OmtxR, roiR = cv2.getOptimalNewCameraMatrix(mtxR, distR, (wR, hR), 1, (wR, hR))
 
 #   Left Side
 retL, mtxL, distL, rvecsL, tvecsL = cv2.calibrateCamera(objpoints, imgpointsL, ChessImaL.shape[::-1], None, None)
@@ -61,7 +62,8 @@ retS, MLS, dLS, MRS, dRS, R, T, E, F = cv2.stereoCalibrate(objpoints,
 
 # StereoRectify function
 rectify_scale = 0  # if 0 image croped, if 1 image nor croped
-RL, RR, PL, PR, Q, roiL, roiR = cv2.stereoRectify(MLS, dLS, MRS, dRS, ChessImaR.shape[::-1], R, T, rectify_scale,(0, 0))
+RL, RR, PL, PR, Q, roiL, roiR = cv2.stereoRectify(MLS, dLS, MRS, dRS, ChessImaR.shape[::-1], R, T, rectify_scale,
+                                                  (0, 0))
 # initUndistortRectifyMap function
 Left_Stereo_Map = cv2.initUndistortRectifyMap(MLS, dLS, RL, PL, ChessImaR.shape[::-1], cv2.CV_16SC2)
 Right_Stereo_Map = cv2.initUndistortRectifyMap(MRS, dRS, RR, PR, ChessImaR.shape[::-1], cv2.CV_16SC2)

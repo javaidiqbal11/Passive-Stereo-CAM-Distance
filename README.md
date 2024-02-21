@@ -93,7 +93,7 @@ Suggest to improve by the following points:
 - Tune the algorithm's parameters(Done)
 - Any change as compared to the key paper(Key paper uses simple formula to calculate the distance using z = f*B/d, but in our approach we are using polynomial regression of order 3 based on disparity)
 
-**Test 1
+**Test 1**
 
 **Disparity vs Distance results**
 
@@ -103,12 +103,13 @@ Graphical Representation
 
 ![img_2.png](img_2.png)
 
-**Test 2
+**Test 2**
+
 **Dataset**
 
 ![img_1.png](img_3.png)
 
-**Proposed Model Prediction
+**Proposed Model Prediction**
 
 ![img_2.png](img_4.png)
 
