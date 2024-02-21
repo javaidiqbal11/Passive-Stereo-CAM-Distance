@@ -33,7 +33,7 @@ python take_images.py
 All the given steps followed from the key-paper to perform the proposed approach.
 Following key-points are mentioned below and whole model divided into the milestones.
 
-![img.png](img.png) 
+![img.png](test/img.png) 
 
 ### Milestone 1
 The first milestone contains the following points:
@@ -97,21 +97,21 @@ Suggest to improve by the following points:
 
 **Disparity vs Distance results**
 
-![img_1.png](img_1.png)
+![img_1.png](test/img_1.png)
 
 Graphical Representation 
 
-![img_2.png](img_2.png)
+![img_2.png](test/img_2.png)
 
 **Test 2**
 
 **Dataset**
 
-![img_1.png](img_3.png)
+![img_1.png](test/img_3.png)
 
 **Proposed Model Prediction**
 
-![img_2.png](img_4.png)
+![img_2.png](test/img_4.png)
 
 #### Supporting material 
 - [Single Cam Distance Measurement](https://github.com/Asadullah-Dal17/Distance_measurement_using_single_camera/tree/main ) </br>
