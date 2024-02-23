@@ -1,6 +1,5 @@
-﻿import numpy as np
-import cv2
-from openpyxl import Workbook
+﻿import cv2
+import numpy as np
 
 # Filtering
 kernel = np.ones((3, 3), np.uint8)

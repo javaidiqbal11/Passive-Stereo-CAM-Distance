@@ -1,17 +1,14 @@
 # utilities .py
 # these colours are used to draw boxes.
-import copy
-import math
 
-import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+import numpy as np
 import scipy
 import scipy.optimize
 import torch
-import torchvision
 import torchvision.transforms.functional as tvtf
-from torchvision.models.detection import MaskRCNN_ResNet50_FPN_Weights, MaskRCNN_ResNet50_FPN_V2_Weights
+from torchvision.models.detection import MaskRCNN_ResNet50_FPN_V2_Weights
 
 weights = MaskRCNN_ResNet50_FPN_V2_Weights.DEFAULT
 
