@@ -3,7 +3,7 @@
 "The use of passive stereo camera to reconstruct depth for a very large distance application"
 
 **Setup** </br>
-Install Python 3.10 and Packages
+1. Install Python 3.10 and Packages
 ```shell
 pip install -r requirements.txt
 ```
@@ -11,22 +11,17 @@ pip install -r requirements.txt
 **How to run the code using PyCharm?** </br>
 Open the terminal on PyCharm 
 
-- Stereo Camera Calibration
+2. Active Camera and Take images
 ```shell
-python calibrate.py
+python take_images.py
 ```
-- Stereo Rectification
-```shell
-python rectification.py
-```
-- Calculate the disparity 
+3. Calculate the distance and disparity 
 ```shell
 python stereo_vision.py
 ```
-
-- Take images from the camera after opening the cam
+4. Calculate the disparity 
 ```shell
-python take_images.py
+python stereo_vision.py
 ```
 
 ### Key Paper Proposed Approach 
