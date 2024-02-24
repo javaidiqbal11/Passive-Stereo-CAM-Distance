@@ -11,7 +11,7 @@ pip install -r requirements.txt
 **How to run the code using PyCharm?** </br>
 Open the terminal on PyCharm 
 
-2. Active Camera and Take images
+2. Active Camera and Take images from both cameras 
 ```shell
 python take_images.py
 ```
@@ -53,7 +53,7 @@ These cameras have some specification:
 - Cable length: 5 ft (1.5 m)
 - Weight: 2.65 oz (75 g)
   
-**Technical Specifications**
+**Camera Technical Specifications**
 - Max Resolution: 720p/30fps
 - Camera megapixel: 0.9
 - Focus type: fixed focus
@@ -80,7 +80,7 @@ The second milestone contains the following points:
 - Model Evaluation
 
 
-### Novel Updates
+### Novelty Updates
 Suggest to improve by the following points:
 
 - Processing time reduced (it's realtime distance calculation)
