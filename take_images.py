@@ -9,6 +9,7 @@ id_image = 0
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
 # Call the two cameras
+# the values can be change as per your system
 CamR = cv2.VideoCapture(0)  # 0 -> Right Camera
 CamL = cv2.VideoCapture(2)  # 2 -> Left Camera
 
