@@ -1,8 +1,10 @@
-﻿import cv2
+import cv2
 import numpy as np
 
 # Filtering
 kernel = np.ones((5, 5), np.uint8)
+FOCAL = 3.5
+BASE = 7.02
 
 
 def coords_mouse_disp(event, x, y, flags, param):
@@ -13,8 +15,9 @@ def coords_mouse_disp(event, x, y, flags, param):
             for v in range(-1, 2):
                 average += disp[y + u, x + v]
         average = average / 9
-        print(f"Disparity {average}")
-        Distance = 239 + -1007 * average + 1820 * average ** 2 + -1052 * average ** 3
+        print(x, y, average)
+
+        Distance = FOCAL*BASE/average
         Distance = np.around(Distance * 0.01, decimals=2)
         print('Distance: ' + str(Distance) + ' m')
 
@@ -110,7 +113,7 @@ Right_Stereo_Map = cv2.initUndistortRectifyMap(MRS, dRS, RR, PR,
 
 # ***** Parameters for the StereoVision *****
 # Create StereoSGBM and prepare all parameters
-window_size = 3
+window_size = 5
 min_disp = 2
 num_disp = 130 - min_disp
 stereo = cv2.StereoSGBM_create(minDisparity=min_disp,
